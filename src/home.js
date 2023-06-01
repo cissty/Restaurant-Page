@@ -1,3 +1,5 @@
+ import loadMenu from "./menu";
+ 
  function createHome() {
 
         const home = document.createElement('div');
@@ -5,12 +7,16 @@
 
         const restaurantName = document.createElement('h1');
         restaurantName.setAttribute('class', 'restaurant-name');
-        restaurantName.textContent = 'Fire & Fork';
+        restaurantName.textContent = 'Fire & Forks';
         
         const button = document.createElement('button');
         button.setAttribute('class', 'menu-button')
         button.textContent = 'SEE MENU'
         
+        button.addEventListener('click', () =>{
+                loadMenu();
+        });
+
         const checkMenu = document.createElement('p')
         checkMenu.textContent = 'Check the menu!';
         checkMenu.classList.add('check-menu-p')
@@ -30,8 +36,6 @@
             return paragraph;
         }
         
-
-
        export default function loadHome(){
         const main = document.getElementById('main');
         main.textContent = '';

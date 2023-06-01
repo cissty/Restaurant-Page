@@ -88,15 +88,6 @@ function createFooter() {
 }
 
 
-
-function resizeBackgroundImage() {
-  let windowHeight = window.innerHeight;
-  let backgroundImage = document.querySelector('.content');
-  backgroundImage.style.height = windowHeight + 'px';
-}
-
-
-
 function initializeWebsite() {
   const content = document.getElementById("content");
 
