@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@400;700&display=swap');*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+    line-height: 1.6;
+    
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(rgba(218, 110, 146, 0.459),rgba(12, 2, 2, 0.644)), url(images/bgbg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  :root{
+    --golden-color: #c59d5f;
+    --bg-light-color: rgba(0, 0, 0, 0.486);
+  }
+  header{
+    font-size: 2.4rem;;
+  }
+
+  nav > button {
+    background-color: transparent;
+    padding: 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    color: whitesmoke;
+    font-size: 24px;
+  }
+
+  nav > button:after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+  }
+  nav > button:hover::after{
+    width: 100%;
+  }
+  nav > button:active{
+    scale: 1.05;
+  }
+
+  .content{
+    height: 100vh;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    border-bottom: 2px solid #c59d5f;
+
+  }  
+
+  .main{
+    max-width: 700px;
+    padding: 1rem 4rem;
+    font-size: 2rem;
+    background-color: var(--bg-light-color);
+  }
+
+  .restaurant-name{
+    color: #c59d5f;
+    font-size: 90px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    border-bottom: 2px solid #c59d5f;
+
+  }
+  
+  .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .home > p {
+    color: white;
+    text-align: center;
+  }
+
+  .check-menu-p {
+    border-bottom: 2px solid #c59d5f;
+    padding-bottom: 20px;
+    font-size: 1.7rem;
+    color: brown;
+  }
+
+.menu-button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #c59d5f;
+    border: none;
+    color: aliceblue;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    
+}
+
+.menu-button:hover{
+    filter: brightness(85%);
+    cursor: pointer;
+}
+.menu-button:active{
+    scale: 1.05;
+}
+
+.menu{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  font-size: 1rem;
+  color: white;
+}
+
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  font-size: 1.7rem;
+
+}
+
+
+
+
+
+  footer{
+    border-top: 2px solid #c59d5f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 700px){
+    .main-content {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  @media (max-width: 500px){
+  
+   html {
+      font-size: 57.5%;
+  }
+  .menu{
+    grid-template-columns: 1fr;
+  }
+  }
