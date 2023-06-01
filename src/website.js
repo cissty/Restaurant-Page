@@ -15,6 +15,7 @@ function createNav() {
 
   const homeButton = document.createElement("button");
   homeButton.classList.add("button-nav");
+  homeButton.setAttribute('id', 'home');
   homeButton.textContent = "Home";
   homeButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
@@ -24,6 +25,7 @@ function createNav() {
 
   const menuButton = document.createElement("button");
   menuButton.classList.add("button-nav");
+  menuButton.setAttribute('id', 'menu');
   menuButton.textContent = "Menu";
   menuButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
@@ -75,6 +77,7 @@ function createFooter() {
 
   const githubLink = document.createElement("a");
   githubLink.href = "https://github.com/cissty";
+  githubLink.setAttribute('target', '_blank');
 
   const githubIcon = document.createElement("i");
   githubIcon.classList.add("fab");

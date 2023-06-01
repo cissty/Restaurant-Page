@@ -14,6 +14,10 @@
         button.textContent = 'SEE MENU'
         
         button.addEventListener('click', () =>{
+            const home = document.getElementById('home');
+            home.setAttribute('class', 'button-nav');
+            const menu = document.getElementById('menu');
+                menu.setAttribute('class', 'button-nav active')
                 loadMenu();
         });
 

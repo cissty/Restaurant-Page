@@ -43,28 +43,28 @@
     border: 2px solid transparent;
     color: whitesmoke;
     font-size: 24px;
+    border-style: none;
+    outline: none;
+    transition: transform 0.3s;
+    
   }
-
-  nav > button:after{
-    content: "";
-    width: 0%;
-    height: 2px;
-    background-color: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.4s;
+  .button-nav:hover {
+    transform: translateY(-6%);
   }
-  nav > button:hover::after{
-    width: 100%;
+  .button-nav.active {
+    border-bottom: 2px solid #ffffff;
+    transform: translateY(-6%);
+    color: #c59c5f;
   }
-  nav > button:active{
-    scale: 1.05;
+  .button-nav {
+    padding: 2rem;
+    font-size: 1.8rem;
+    transition: transform 0.3s;
   }
-
+  
   .content{
     height: 100vh;
     width: 100%;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,14 +90,17 @@
   }
 
   .restaurant-name{
-    color: #c59d5f;
+    color: #ff9b04;
     font-size: 90px;
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    border-bottom: 2px solid #c59d5f;
+    border-bottom: 2px solid #f5be6b;
 
   }
-  
+  .food-name{
+    color: #ff9b04;
+    padding: 1rem;
+  }
   .home{
     display: flex;
     flex-direction: column;
@@ -128,7 +131,6 @@
     color: aliceblue;
     border-radius: 6px;
     margin-bottom: 50px;
-    
 }
 
 .menu-button:hover{
@@ -145,8 +147,8 @@
   gap: 4rem;
   font-size: 1rem;
   color: white;
+  text-align: center;
 }
-
 
 .contact{
   display: flex;
@@ -157,7 +159,7 @@
 
 }
 
-  footer{
+  .footer{
     border-top: 2px solid #c59d5f;
     display: flex;
     align-items: center;
@@ -167,6 +169,17 @@
     width: 100%;
     padding: 1rem;
     font-size: 1.1rem;
+  }
+
+  .fab{
+    margin-left: 1rem;
+    color: white;
+    font-size: 20px;
+    transition: transform .3s ease-in-out;
+  }
+
+  .fab:hover{
+    transform: rotate(360deg);
   }
 
   @media (max-width: 700px){
